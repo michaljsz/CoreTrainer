@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BackTrainer</string>
+    <string name="aboutme">This app was my first project, created for the purpose of learning Android Development.
+        \n
+        \n
+        I have no medical or physiotherapic experience.
+        \n
+        \n
+        Workout included in this app was established by me over last few years of looking for exercises that
+        can alleviate my back pain.
+
+    </string>
+</resources>

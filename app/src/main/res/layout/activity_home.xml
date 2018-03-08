@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.michalj.backtrainer.Home"
+    android:background="@drawable/back_spine">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/workout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/round_shape_btn"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="20dp"
+            android:text="Work out"
+            android:textColor="@android:color/background_light"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/settings"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/round_shape_btn"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="20dp"
+            android:text="Settings"
+            android:textColor="@android:color/background_light"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/stats"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/round_shape_btn"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="20dp"
+            android:text="Stats"
+            android:textColor="@android:color/background_light"
+            android:textSize="20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <Button
+                android:id="@+id/aboutme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/round_shape_btn"
+                android:text="about me"
+                android:textColor="@android:color/background_light"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

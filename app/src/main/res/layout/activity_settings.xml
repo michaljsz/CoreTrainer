@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_spine2"
+    tools:context="com.michalj.backtrainer.Settings">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/round_shape_btn"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="settings"
+            android:textColor="@android:color/background_light"
+            android:textSize="20dp"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="choose exercises"
+            android:textColor="@android:color/background_light"
+            android:textSize="15dp"
+            android:layout_marginBottom="6dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/pull_ups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@android:color/background_light"
+                android:text="pull ups"
+                android:textColor="@android:color/background_light"
+                android:textSize="13dp" />
+
+            <CheckBox
+                android:id="@+id/plank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@android:color/background_light"
+                android:text="plank"
+                android:textColor="@android:color/background_light"
+                android:textSize="13dp" />
+
+            <CheckBox
+                android:id="@+id/front_squat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@android:color/background_light"
+                android:text="front squat"
+                android:textColor="@android:color/background_light"
+                android:textSize="13dp" />
+
+            <CheckBox
+                android:id="@+id/push_ups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@android:color/background_light"
+                android:text="press"
+                android:textColor="@android:color/background_light"
+                android:textSize="13dp" />
+
+            <CheckBox
+                android:id="@+id/military_press"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@android:color/background_light"
+                android:text="military press"
+                android:textColor="@android:color/background_light"
+                android:textSize="13dp" />
+
+            <CheckBox
+                android:id="@+id/dips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@android:color/background_light"
+                android:text="dips"
+                android:textColor="@android:color/background_light"
+                android:textSize="13dp" />
+
+            <CheckBox
+                android:id="@+id/body_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@android:color/background_light"
+                android:text="body row"
+                android:textColor="@android:color/background_light"
+                android:textSize="13dp" />
+
+            <CheckBox
+                android:id="@+id/bicep_curl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@android:color/background_light"
+                android:text="bicep curl"
+                android:textColor="@android:color/background_light"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save_exercises"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_shape_btn"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:text="save changes"
+            android:textColor="@android:color/background_light"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_shape_btn"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:text="reset progress"
+            android:textColor="@android:color/background_light"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
