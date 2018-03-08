@@ -57,17 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="160dp">
 
-            <Button
-                android:id="@+id/aboutme"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/round_shape_btn"
-                android:text="about me"
-                android:textColor="@android:color/background_light"
-                android:textSize="10dp" />
+
         </RelativeLayout>
 
     </LinearLayout>

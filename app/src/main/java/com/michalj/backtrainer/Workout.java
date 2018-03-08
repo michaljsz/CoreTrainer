@@ -48,7 +48,7 @@ public class Workout extends AppCompatActivity {
         final Button done = findViewById(R.id.done);
         done.setText("DONE");
 
-        final CountDownTimer countDownTimer = new CountDownTimer(4*1000, 1000) {
+        final CountDownTimer countDownTimer = new CountDownTimer(60*1000, 1000) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -92,7 +92,7 @@ public class Workout extends AppCompatActivity {
                     finish();
                 } else {
 
-                        handler.postDelayed(runnable, 4 * 1000);
+                        handler.postDelayed(runnable, 60 * 1000);
                         done.setEnabled(false);
                         countDownTimer.start();
                         progres.setVisibility(View.VISIBLE);

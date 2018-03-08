@@ -1,6 +1,7 @@
 package com.michalj.backtrainer;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,18 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 confirmation();
+            }
+        });
+
+        Button aboutme = findViewById(R.id.aboutme);
+        aboutme.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent myIntent = new Intent(Settings.this,
+                        AboutMe.class);
+                startActivity(myIntent);
             }
         });
     }

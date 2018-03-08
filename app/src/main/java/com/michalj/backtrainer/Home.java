@@ -14,17 +14,6 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Button aboutme = findViewById(R.id.aboutme);
-        aboutme.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-
-                Intent myIntent = new Intent(Home.this,
-                        AboutMe.class);
-                startActivity(myIntent);
-            }
-        });
 
         Button stats = findViewById(R.id.stats);
         stats.setOnClickListener(new View.OnClickListener() {
