@@ -14,19 +14,54 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/settings"
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/round_shape_btn"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:text="settings"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/restTimeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="200dp"
-            android:background="@drawable/round_shape_btn"
-            android:paddingBottom="10dp"
+            android:layout_marginBottom="16dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:paddingTop="10dp"
-            android:text="settings"
+            android:text="Choose rest time (seconds)"
             android:textColor="@android:color/background_light"
-            android:textSize="20sp" />
-<!--
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/restTimeSpinner"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:entries="@array/rest_time"
+            android:textColor="@android:color/background_light"
+            android:background="@drawable/round_shape_btn"
+            android:layout_marginBottom="16dp"
+            android:popupBackground="#4d9bb2"/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_shape_btn"
+            android:text="submit"
+            android:textColor="@android:color/background_light"
+            android:textSize="13sp"
+            android:layout_marginBottom="32dp"/>
+
+    <!--
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -143,7 +178,7 @@
             android:text="about me"
             android:textColor="@android:color/background_light"
             android:textSize="13sp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="32dp"/>
 
 
         <Button

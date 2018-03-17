@@ -7,7 +7,13 @@
         \n
         \n
         Workout included in this app was established by me over last few years of looking for exercises that
-        can alleviate my back pain.
-
-    </string>
+        can alleviate my back pain. </string>
+    <string name="rest_prompt">Select rest time</string>
+    
+    
+    <string-array name="rest_time">
+        <item>3</item>
+        <item>60</item>
+        <item>90</item>
+    </string-array>
 </resources>

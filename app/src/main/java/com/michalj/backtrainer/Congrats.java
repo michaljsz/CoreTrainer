@@ -40,6 +40,7 @@ public class Congrats extends AppCompatActivity {
 
         final Set set = db.firstSetDao().getSet();
 
+
         Button done = findViewById(R.id.congratsDone);
         done.setOnClickListener(new View.OnClickListener() {
 
@@ -79,7 +80,11 @@ public class Congrats extends AppCompatActivity {
                     }
                 }
                 set.id+=1;
-                db.firstSetDao().insertWorkout(set);
+                new Thread(new Runnable() {
+                    public void run() {
+                        db.firstSetDao().insertWorkout(set);
+                    }
+                }).start();
                 finish();
             }
         });

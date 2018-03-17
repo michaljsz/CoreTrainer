@@ -1,8 +1,10 @@
 package com.michalj.backtrainer;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -27,6 +29,7 @@ public class Workout extends AppCompatActivity {
     private int[] sets = {5,1,6,6,4,4,6,4};
     private int setCount = 1;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,9 @@ public class Workout extends AppCompatActivity {
         final double[] previous = {db.firstSetDao().getPullups(), db.firstSetDao().getPlank(),
                 db.firstSetDao().getFrontSquat(), db.firstSetDao().getPress(), db.firstSetDao().getBicepCurl(),
                 db.firstSetDao().getMilitaryPress(),db.firstSetDao().getDips(),db.firstSetDao().getBodyRowk()};
+
+        final SharedPreferences sp = getSharedPreferences("RestTime", Context.MODE_PRIVATE);
+        final int restTime = sp.getInt("RestTime",2);
 
         final TextView exercise = findViewById(R.id.exercise);
         exercise.setText(exercises[buttonCount]);
@@ -48,7 +54,8 @@ public class Workout extends AppCompatActivity {
         final Button done = findViewById(R.id.done);
         done.setText("DONE");
 
-        final CountDownTimer countDownTimer = new CountDownTimer(60*1000, 1000) {
+        // timer used for counting remaining rest time between exercises
+        final CountDownTimer countDownTimer = new CountDownTimer(restTime*1000, 1000) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -76,7 +83,10 @@ public class Workout extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+
                 if ( setCount % sets[buttonCount] == 0 ) {
+                    // determine if this is first or second workout type and which exercises to choose
                     if (db.firstSetDao().getId() % 2 == 0 && buttonCount == 1) {
                         buttonCount += 4;
                         secondSet = true;
@@ -86,13 +96,14 @@ public class Workout extends AppCompatActivity {
                     setCount = 1;
                 }
                 if ( (buttonCount == 5 && secondSet == false ) || (buttonCount ==8 && secondSet == true )) {
+                    // changes activity on completing the workout
                     Intent myIntent = new Intent(Workout.this, Congrats.class);
                     startActivity(myIntent);
                     overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
                     finish();
                 } else {
-
-                        handler.postDelayed(runnable, 60 * 1000);
+                        // ensures rest between reps and exercises. Runnable handles setting next exercise/rep
+                        handler.postDelayed(runnable, restTime * 1000);
                         done.setEnabled(false);
                         countDownTimer.start();
                         progres.setVisibility(View.VISIBLE);
@@ -102,6 +113,10 @@ public class Workout extends AppCompatActivity {
             }
         });
     }
+
+/*
+    Confirmation for exiting workout without saving data
+     */
     public void onBackPressed() {
         AlertDialog.Builder alertdialog=new AlertDialog.Builder(this, R.style.MyDialogTheme);
         alertdialog.setTitle("warning");
@@ -122,7 +137,7 @@ public class Workout extends AppCompatActivity {
         });
 
         AlertDialog dialog = alertdialog.show();
-        TextView msg = (TextView)dialog.findViewById(android.R.id.message);
+        TextView msg = dialog.findViewById(android.R.id.message);
         msg.setGravity(Gravity.CENTER);
         msg.setTextColor(Color.WHITE);
 

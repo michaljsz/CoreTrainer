@@ -39,7 +39,7 @@ public abstract class ExerciesDatabase extends RoomDatabase{
                         });
                     }
                 })
-                .allowMainThreadQueries()
+                .allowMainThreadQueries() // to be removed in next update
                 .build();
         }
 
